@@ -39,4 +39,7 @@ oc process -f https://raw.githubusercontent.com/jboss-openshift/application-temp
 # in case the image cannot be pulled, execute e.g. (check the sha hash!):
 # oc tag —source=docker registry.access.redhat.com/redhat-sso-7/sso71-openshift@sha256:2c551ed9e5bb669eabd875a52779773e1bd9ab89b22cead3505b640139d02774 openshift/redhat-sso71-openshift:1.1 —insecure=true
 # minishift ssh -- oc tag —source=docker registry.access.redhat.com/redhat-sso-7/sso71-openshift@sha256:2c551ed9e5bb669eabd875a52779773e1bd9ab89b22cead3505b640139d02774 openshift/redhat-sso71-openshift:1.1 —insecure=true
-
+# Credits to Nicolas Massé:
+# keytool -exportcert -alias ssl -keypass PASSWORD_KEYSTORE_JKS -storepass password123 -keystore keystore.jks -file cacert.pem -rfc
+# e.g. keytool -exportcert -alias keystore -keypass password123 -storepass password123 -keystore keystore.jks -file cacert.pem -rfc
+# perl -i.bak -pe 'chomp; s/\r//g; print "\\n"' cacert.pem
