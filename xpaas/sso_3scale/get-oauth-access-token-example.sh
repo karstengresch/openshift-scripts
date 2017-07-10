@@ -6,7 +6,7 @@ APICAST_HOSTNAME="olaservice-3scale-apicast-staging.192.168.42.249.nip.io"
 
 CLIENT_ID="e846df74"
 CLIENT_SECRET="19285ed2a5b3ca93d43976faff20394e"
-SCOPE="jdoe"
+SCOPE="test"
 REDIRECT_URI="https://www.getpostman.com/oauth2/callback"
 
 echo
@@ -31,4 +31,4 @@ else
   exit 1
 fi
 
-curl --insecure -X POST -d "client_id=$CLIENT_ID" -d "client_secret=$CLIENT_SECRET" -d "grant_type=authorization_code" -d "redirect_uri=$REDIRECT_URI" -d "code=$CODE" "http://$APICAST_HOSTNAME/oauth/token"
+curl --insecure -X POST -d "client_id=$CLIENT_ID" -d "client_secret=$CLIENT_SECRET" -d "grant_type=authorization_code" -d "redirect_uri=$REDIRECT_URI" -d "code=$CODE" "https://$APICAST_HOSTNAME/oauth/token"
