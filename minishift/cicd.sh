@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 # 
 # CICD Demo
 # https://github.com/OpenShiftDemos/openshift-cd-demo
