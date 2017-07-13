@@ -4,8 +4,11 @@
 # https://github.com/OpenShiftDemos/openshift-cd-demo
 #
 # you need to be loged in with oc for this to work
-#
-TEMPLATEPATH="$HOME/dev/co/openshift-cd-demo"
+oc login -u system:admin
+# Adjust this to e.g. $HOME/dev/co/openshift-cd-demo - wherever the checkout from...
+# git clone https://github.com/OpenShiftDemos/openshift-cd-demo.git
+# ...lies
+TEMPLATEPATH="."
 
 DEVP="cicd-dev"
 STAGEP="cicd-stage"
